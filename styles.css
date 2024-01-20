@@ -453,6 +453,21 @@ WHASTAPP LOGO
   }
 }
 
+.planes{
+  display: flex;
+  flex-direction: row;
+  gap: 5px
+  ;justify-content: space-around
+  ;
+}
+
+.plan1, .plan2, .plan3{
+
+width: 100%; height: 50%!important;
+background-color: brown;
+
+}
+
 
 
 
