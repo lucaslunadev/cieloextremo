@@ -452,22 +452,104 @@ WHASTAPP LOGO
     scale: 1.1;
   }
 }
-
-.planes{
+.section-planes h1{
   display: flex;
-  flex-direction: row;
-  gap: 5px
-  ;justify-content: space-around
-  ;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente los elementos hijos */
+  justify-content: center; /* Centra verticalmente si es necesario */
+  /* Otros estilos que necesites */
+  margin-top: 10px;
 }
 
-.plan1, .plan2, .plan3{
+.planes {
+  display: flex;
+  overflow-x: auto; 
+  -webkit-overflow-scrolling: touch;
+  gap: 15px;
+  /* Otros estilos para .planes */
+}
 
-width: 100%; height: 50%!important;
-background-color: brown;
+.plan1, .plan2, .plan3 {
+  flex: 0 0 auto;
+  width: 80%;
+  height: 40vh;
+  background-color: rebeccapurple;
+  /* Otros estilos para .plan1, .plan2, .plan3 */
+}
+
+@media (min-width: 768px) {
+  .planes {
+    overflow-x:hidden;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .plan1, .plan2, .plan3 {
+    width: calc(33.333% - 10px);
+    /* Otros ajustes para pantallas más grandes */
+  }
+}
+
+
+
+#section-pilotos{
+
 
 }
 
 
 
+.piloto-1, .piloto-2, .piloto-3{
+  display: flex;
+  justify-content: center;
+    gap: 10px;
+  padding:  10px;
+}
+.foto{
+  width: 50%;
+  height: 20vh;
+  background-color: #ffc300;
+}
+.carnet{
+  width: 50%;
+  height: 20vh;
+  background-color: red;
+}
+
+
+.my-carousel .carousel-indicators [data-bs-target] {
+  width: 10px; /* Tamaño del círculo */
+  height: 10px; /* Tamaño del círculo */
+  border-radius: 50%; /* Hace que sea un círculo */
+}
+
+@media (max-width: 768px) {
+  .card-container {
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      gap: 10px
+  }
+
+  .card-container .card {
+      flex: 0 0 auto;
+      width: 300px; /* o el ancho que prefieras */
+      background-color: bisque;
+  }
+}
+
+#carousel-pilotos {
+   /* Ajusta esto según sea necesario */
+}
+
+#carousel-pilotos .carousel-indicators {
+  position: static;
+  display: flex;
+  justify-content: center; /* Centra los indicadores */
+   /* Añade un poco de espacio encima de los indicadores */
+margin-top:-10px;}
+
+#carousel-pilotos .carousel-indicators button {
+  background-color: #000; /* Color de los indicadores */
+  
+}
 
